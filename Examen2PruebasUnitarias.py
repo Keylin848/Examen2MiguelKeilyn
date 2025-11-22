@@ -44,6 +44,11 @@ class TestMiClase(unittest.TestCase):
         resultado = self.objeto.VerificaListaCanciones(["Canción 1", None, "Canción 3"])
         self.assertFalse(resultado)
 
+    def test_encuentra_elemento_existente(self):
+        """Prueba cuando el elemento SÍ existe en la lista"""
+        lista = [1, 2, 3, 4, 5]
+        resultado = self.objeto.Encuentra(lista, 3)
+        self.assertTrue(resultado)
 
 if __name__ == '__main__':
     unittest.main()
