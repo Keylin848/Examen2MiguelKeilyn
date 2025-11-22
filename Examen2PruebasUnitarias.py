@@ -11,7 +11,7 @@ class TestMiClase(unittest.TestCase):
     def test_obtiene_valencia_con_varios_impares(self):
         resultado = self.objeto.ObtieneValencia(1234567)
         #self.assertEqual(resultado, 4)  # 1, 3, 5, 7 son impares
-        self.assertEqual(resultado, 5)  # <-- A PROPÓSITO MAL
+        self.assertEqual(resultado, 9)  # <-- A PROPÓSITO MAL
 
     def test_obtiene_valencia_solo_pares(self):
         resultado = self.objeto.ObtieneValencia(2468)
