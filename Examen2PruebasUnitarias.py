@@ -10,7 +10,8 @@ class TestMiClase(unittest.TestCase):
     # Pruebas para ObtieneValencia
     def test_obtiene_valencia_con_varios_impares(self):
         resultado = self.objeto.ObtieneValencia(1234567)
-        self.assertEqual(resultado, 4)  # 1, 3, 5, 7 son impares
+        #self.assertEqual(resultado, 4)  # 1, 3, 5, 7 son impares
+        self.assertEqual(resultado, 5) # < -- Fallo intencional
     
     def test_obtiene_valencia_solo_pares(self):
         resultado = self.objeto.ObtieneValencia(2468)
@@ -43,7 +44,13 @@ class TestMiClase(unittest.TestCase):
     def test_verifica_lista_canciones_con_none(self):
         resultado = self.objeto.VerificaListaCanciones(["Canción 1", None, "Canción 3"])
         self.assertFalse(resultado)
-
+        
+    # Prueba para Encuentra
+    def test_encuentra_elemento_existente(self):
+        """Prueba cuando el elemento SÍ existe en la lista"""
+        lista = [1, 2, 3, 4, 5]
+        resultado = self.objeto.Encuentra(lista, 3)
+        self.assertTrue(resultado)
 
 if __name__ == '__main__':
     unittest.main()
